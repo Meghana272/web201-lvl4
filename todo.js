@@ -18,7 +18,7 @@ const todoList = () => {
     new Date(new Date().setDate(dateToday.getDate()+1))
   );
   const overdue = () => {
-    const arr = all.filter((person) => person.dueDate == yesterday);
+    const arr = all.filter((person) => person.dueDate < today);
     return arr;
   };
   
@@ -28,8 +28,7 @@ const todoList = () => {
   };
 
   const dueLater = () => {
-    const arr = all.filter((person) => person.dueDate === tomorrow);
-
+    const arr = all.filter((person) => person.dueDate > today);
     return arr;
   };
 
