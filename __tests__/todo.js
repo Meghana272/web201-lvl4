@@ -49,15 +49,15 @@ describe("TodoList Test Suite", () => {
     expect(all[0].completed).toBe(true);
   });
   test("Should check retrieval of overdue items", () => {
-    m = overdue();
-    expect(all[2].dueDate).toBe(m[0]["dueDate"]);
+    v = overdue();
+    expect(all[2].dueDate).toBe(v[0]["dueDate"]);
   });
   test("Should check retrieval of duetoday items", () => {
-    m = dueToday();
-    expect(all[0].dueDate).toBe(m[0]["dueDate"]);
+    v = dueToday();
+    expect(all[0].dueDate).toBe(v[0]["dueDate"]);
   });
   test("Should check retrieval of due later items", () => {
-    m = dueLater();
-    expect(all[1].dueDate).toBe(m[0]["dueDate"]);
+    v = dueLater();
+    expect(all[1].dueDate).toBe(v[0]["dueDate"]);
   });
 });
